@@ -154,6 +154,23 @@ form, #login-section, #signup-section {
     margin: 10px 0;
 }
 
+table {
+    margin-top: 20px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+th {
+    background: #6366f1;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .book {
