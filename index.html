@@ -3,14 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <title>Library Management System</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <h1>Library Management System</h1>
-<input type="text" id="search" placeholder="Search by title or author..." />
-    <div id="book-list"></div>
+<!-- LOGIN SECTION -->
+<div id="login-section">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+</div>
 
-    <script src="script.js"></script>
+<!--SIGN UP SECTION-->
+<div id="signup-section">
+    <h2>User Signup</h2>
+
+    <input type="text" id="signup-username" placeholder="New Username" />
+    <input type="password" id="signup-password" placeholder="New Password" />
+
+    <button onclick="signup()">Sign Up</button>
+</div>
+
+<!-- USER SECTION -->
+
+<div id="user-section" style="display:none;">
+    <button class="back" onclick="goBack()">⬅ Go Back</button>
+    <h1>Library System (User)</h1>
+
+    <input type="text" id="search" placeholder="Search by title or author..." />
+
+    <div id="book-list"></div>
+</div>
+
+<!-- ADMIN SECTION -->
+<div id="admin-section" style="display:none;">
+<button class="back" onclick="goBack()">⬅ Go Back</button>
+    <h1>Library System (Admin)</h1>
+
+    <input type="text" id="search-admin" placeholder="Search by title or author..." />
+
+    <!-- ADD BOOK -->
+    <h2>Add Book</h2>
+    <input type="text" id="title" placeholder="Book Title">
+    <input type="text" id="author" placeholder="Author">
+    <input type="number" id="copies" placeholder="Total Copies">
+    <button onclick="addBook()">Add Book</button>
+
+    <!-- CONTROLS -->
+    <h2>Controls</h2>
+    
+    <button onclick="displayBooks(allBooks)">Show All Books</button>
+    <button onclick="showBorrowed()">Show Borrowed Books</button>
+
+    <div id="book-list-admin"></div>
+
+</div>
+<div id="borrow-modal" class="modal" style="display:none;">
+    <div class="modal-content">
+
+        <h2>Borrow Book (Admin)</h2>
+
+        <p id="borrow-book-title"></p>
+
+        <input type="text" id="borrow-user-name" placeholder="User Name">
+        <input type="text" id="borrow-user-id" placeholder="User ID">
+
+        <button onclick="confirmBorrow()">Confirm Borrow</button>
+        <button onclick="closeBorrow()">Cancel</button>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
