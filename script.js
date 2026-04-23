@@ -287,7 +287,7 @@ function confirmBorrow() {
         bookId: book.id,
         title: book.title,
         userName: userName,
-        userId: userId,
+        
         borrowedAt: new Date().toLocaleString()
     });
 
@@ -299,11 +299,42 @@ function confirmBorrow() {
     alert(`${userName} borrowed "${book.title}"`);
 }
 
-function showBorrowed() {
+function showBorrowedUI() {
     const records = JSON.parse(localStorage.getItem("borrowRecords")) || [];
 
-    console.log(records);
-    alert("Check console for borrowed books list");
+    const container = document.getElementById("borrowed-list");
+
+    container.innerHTML = "";
+
+    if (records.length === 0) {
+        container.innerHTML = "<p>No borrowed books yet</p>";
+        return;
+    }
+
+    let table = `
+        <table border="1" style="width:80%; margin:auto; border-collapse: collapse;">
+            <tr>
+                <th>Book</th>
+                <th>User Name</th>
+                
+                <th>Date</th>
+            </tr>
+    `;
+
+    records.forEach(r => {
+        table += `
+            <tr>
+                <td>${r.title}</td>
+                <td>${r.userName}</td>
+                
+                <td>${r.borrowedAt}</td>
+            </tr>
+        `;
+    });
+
+    table += "</table>";
+
+    container.innerHTML = table;
 }
 
 
