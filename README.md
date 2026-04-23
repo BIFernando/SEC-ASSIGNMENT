@@ -4,25 +4,28 @@ Role-Based SDLC Simulation Project
 
 Functional requirements
 
-  The system shall display a list of available books 
-  The system shall allow users to search for books by title or author 
-  The system shall allow users to borrow books 
-  The system shall allow users to return books 
-  The system shall update book availability after borrowing/returning 
-  The system shall allow admin to add new books 
-  The system shall allow admin to remove books 
-  The system shall allow admin to view borrowed books
+•	The system shall display a list of available books 
+•	The system shall allow users to search for books by title or author 
+•	The system shall allow users to borrow books 
+•	The system shall allow users to return books 
+•	The system shall update book availability after borrowing/returning 
+•	The system shall allow admin to add new books 
+•	The system shall allow admin to remove books 
+•	The system shall allow admin to view borrowed books
+
   Non-functional requirements
-  The system should be easy to use (user-friendly UI) 
-  The system should respond quickly (fast search & actions) 
-  The system should update the transactions real time
-  The system should be reliable (no crashes during use) 
-  The system should ensure data accuracy (correct book status) 
-  The system should be simple and lightweight 
-  The system should be accessible on basic devices (PC/laptop) 
-  The system should be maintainable (easy to update code)
-  The system should ensure security of user data 
-  The system should prevent unauthorized access
+  
+•	The system should be easy to use (user-friendly UI) 
+•	The system should respond quickly (fast search & actions) 
+•	The system should update the transactions real time
+•	The system should be reliable (no crashes during use) 
+•	The system should ensure data accuracy (correct book status) 
+•	The system should be simple and lightweight 
+•	The system should be accessible on basic devices (PC/laptop) 
+•	The system should be maintainable (easy to update code)
+•	The system should ensure security of user data 
+•	The system should prevent unauthorized access
+
 
 Product backlog
 
